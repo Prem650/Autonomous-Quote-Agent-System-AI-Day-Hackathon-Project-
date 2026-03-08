@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Insurance Evaluation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+color:white;
+}
+
+.video-bg{
+position:fixed;
+min-width:100%;
+min-height:100%;
+object-fit:cover;
+z-index:-1;
+}
+
+.container{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.form-box{
+
+width:420px;
+padding:40px;
+
+background:rgba(0,0,0,0.6);
+
+border-radius:15px;
+
+}
+
+label{
+display:block;
+margin-top:15px;
+}
+
+input{
+
+width:100%;
+padding:12px;
+
+margin-top:6px;
+
+border:none;
+
+border-radius:6px;
+
+}
+
+button{
+
+margin-top:20px;
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:8px;
+
+background:linear-gradient(90deg,#00c6ff,#0072ff);
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.nav{
+
+display:flex;
+
+gap:10px;
+
+margin-top:15px;
+
+}
+
+.nav button{
+background:#444;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<video autoplay muted loop class="video-bg">
+<source src="/static/bg.mp4">
+</video>
+
+<div class="container">
+
+<div class="form-box">
+
+<h2>Insurance Quote Evaluation</h2>
+
+<form action="/predict" method="POST">
+
+<label>Quoted Premium ($)</label>
+<input type="number" name="premium" placeholder="$1200" required>
+
+<label>Previous Accidents</label>
+<input type="number" name="accidents" required>
+
+<label>Driver Age</label>
+<input type="number" name="age" required>
+
+<label>Annual Miles (miles)</label>
+<input type="number" name="miles" placeholder="12000 miles" required>
+
+<button type="submit">Evaluate</button>
+
+</form>
+
+<div class="nav">
+
+<a href="/">
+<button>Home</button>
+</a>
+
+<button onclick="history.back()">Go Back</button>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>margin-top:20px;
+width:100%;
+padding:14px;
+
+border:none;
+
+background:#00c6ff;
+
+border-radius:8px;
+color:white;
+font-size:16px;
+cursor:pointer;
+
+}
+
+.nav-buttons{
+
+display:flex;
+gap:10px;
+margin-top:10px;
+
+}
+
+.nav-buttons button{
+background:#444;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<video autoplay muted loop class="video-bg">
+<source src="/static/bg.mp4" type="video/mp4">
+</video>
+
+<div class="container">
+
+<div class="form-box">
+
+<h2>Insurance Quote Evaluation</h2>
+
+<form action="/predict" method="POST">
+
+<label>Quoted Premium ($)</label>
+<input type="number" name="premium" placeholder="$ 1200">
+
+<label>Previous Accidents</label>
+<input type="number" name="accidents">
+
+<label>Driver Age</label>
+<input type="number" name="age">
+
+<label>Annual Miles (miles)</label>
+<input type="number" name="miles" placeholder="12000 miles">
+
+<button type="submit">EVALUATE</button>
+
+</form>
+
+<div class="nav-buttons">
+
+<a href="/">
+<button>Home</button>
+</a>
+
+<button onclick="history.back()">Go Back</button>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

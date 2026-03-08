@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Evaluation Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+color:white;
+}
+
+.video-bg{
+position:fixed;
+min-width:100%;
+min-height:100%;
+object-fit:cover;
+z-index:-1;
+}
+
+.container{
+padding:60px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+
+background:rgba(0,0,0,0.55);
+
+padding:30px;
+
+border-radius:15px;
+
+backdrop-filter:blur(10px);
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.7);
+
+}
+
+.result{
+font-size:22px;
+color:#00e5ff;
+margin-top:10px;
+}
+
+.graph{
+
+width:450px;
+margin:auto;
+margin-top:60px;
+
+background:rgba(0,0,0,0.55);
+
+padding:20px;
+
+border-radius:15px;
+
+}
+
+.buttons{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+button{
+
+padding:12px 30px;
+
+border:none;
+
+border-radius:8px;
+
+background:linear-gradient(90deg,#00c6ff,#0072ff);
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.secondary{
+background:#444;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<video autoplay muted loop class="video-bg">
+<source src="/static/bg.mp4">
+</video>
+
+<div class="container">
+
+<h1>AI Multi-Agent Evaluation Dashboard</h1>
+
+<div class="grid">
+
+<div class="card">
+<h3>Risk Profiler</h3>
+<div class="result">{{risk}}</div>
+</div>
+
+<div class="card">
+<h3>Conversion Predictor</h3>
+<div class="result">{{conversion}}%</div>
+</div>
+
+<div class="card">
+<h3>Premium Advisor</h3>
+<div class="result">{{advice}}</div>
+</div>
+
+<div class="card">
+<h3>Decision Router</h3>
+<div class="result">{{decision}}</div>
+</div>
+
+</div>
+
+<div class="graph">
+
+<canvas id="chart"></canvas>
+
+</div>
+
+<div class="buttons">
+
+<a href="/download">
+<button>Download PDF Report</button>
+</a>
+
+<a href="/">
+<button class="secondary">Home</button>
+</a>
+
+<button class="secondary" onclick="history.back()">Go Back</button>
+
+</div>
+
+</div>
+
+<script>
+
+new Chart(document.getElementById('chart'),{
+
+type:'bar',
+
+data:{
+
+labels:['Conversion Probability'],
+
+datasets:[{
+
+data:[{{conversion}}],
+
+backgroundColor:'#00e5ff'
+
+}]
+
+},
+
+options:{
+
+scales:{
+
+y:{beginAtZero:true,max:100}
+
+}
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
