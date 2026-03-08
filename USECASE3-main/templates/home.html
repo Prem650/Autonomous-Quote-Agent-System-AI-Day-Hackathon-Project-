@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Autonomous Quote Agent</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+.video-bg{
+position:fixed;
+min-width:100%;
+min-height:100%;
+object-fit:cover;
+z-index:-1;
+}
+
+.overlay{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:rgba(0,0,0,0.55);
+color:white;
+}
+
+.hero{
+
+max-width:900px;
+padding:60px;
+
+background:rgba(0,0,0,0.45);
+
+border-radius:20px;
+
+backdrop-filter:blur(10px);
+
+}
+
+h1{
+font-size:50px;
+margin-bottom:20px;
+}
+
+p{
+font-size:18px;
+line-height:1.6;
+}
+
+.features{
+
+margin-top:25px;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:15px;
+
+}
+
+.feature{
+
+background:rgba(255,255,255,0.1);
+
+padding:15px;
+
+border-radius:8px;
+
+}
+
+button{
+
+margin-top:30px;
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:8px;
+
+background:linear-gradient(90deg,#00c6ff,#0072ff);
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<video autoplay muted loop class="video-bg">
+<source src="/static/bg.mp4" type="video/mp4">
+</video>
+
+<div class="overlay">
+
+<div class="hero">
+
+<h1>Autonomous Quote Agent System</h1>
+
+<p>
+An AI-powered multi-agent system that evaluates insurance quotes using
+risk analysis, conversion prediction, premium advisory, and automated
+decision routing.
+</p>
+
+<div class="features">
+
+<div class="feature">🧠 Risk Profiling</div>
+<div class="feature">📊 Conversion Prediction</div>
+<div class="feature">💰 Premium Optimization</div>
+<div class="feature">🚦 Decision Routing</div>
+
+</div>
+
+<a href="/input">
+
+<button>Start Evaluation</button>
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
